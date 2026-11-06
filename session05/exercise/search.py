@@ -71,9 +71,9 @@ def search_documents(keywords, documents, top_k):
 
     # スコアの大きい順に並べる。同じスコアなら資料IDの小さい順のまま。
     # TODO: 並べ替えて、先頭から top_k 件だけ返す。下の2行のコメントを外し、仮の return の行を消す。
-    # results.sort(key=get_score, reverse=True)
-    # return results[:top_k]
-    return results  # 仮。見つかった資料を、並べ替えずに全部返している
+    results.sort(key=get_score, reverse=True)
+    return results[:top_k]
+    #return results  # 仮。見つかった資料を、並べ替えずに全部返している
 
 
 def get_score(result):
